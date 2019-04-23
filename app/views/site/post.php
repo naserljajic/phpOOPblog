@@ -1,12 +1,11 @@
 <?php
-include_once __DIR__."/vendor/autoload.php";
-include 'app/views/layout/header.php';
+include './app/views/layout/header.php';
 use Blog\models\Posts;
 $posts=new Posts();
 if ($_SERVER['REQUEST_METHOD'] == "GET") {
-  if (!empty($_GET['id'])) {
-    $id=(int)$_GET['id'];
-    $sql="SELECT * FROM posts WHERE id=".$id;
+  if (empty($_GET['id'])) {
+    //$id=(int)$_GET['id'];
+    $sql="SELECT * FROM posts WHERE id=1";
     $result=$posts->getPosts($sql); 
     ?>
   <!-- Page Header -->

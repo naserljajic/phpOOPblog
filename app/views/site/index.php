@@ -31,7 +31,7 @@ $result=$posts->getPosts($query);
               $posts->setDetails($res['title'],$res['post'],$res['author_id'],$res['date_posted']);
               $post=$posts->getDetails();?>
         <div class="post-preview">
-          <a href="post.php?id=<?php echo $res['id'];?>">
+          <a href="#">
             <h2 class="post-title">
               <?php echo $post['title']; ?>
             </h2>

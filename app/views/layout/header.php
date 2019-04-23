@@ -48,7 +48,7 @@ session_start();
           			echo '<a class="nav-link" href="addpost">Add new post</a>';
           		}else {
           			?>
-            <a class="nav-link" href="post/1">Sample post</a>
+            <a class="nav-link" href="post">Sample post</a>
             <?php
           		}
           	?>
