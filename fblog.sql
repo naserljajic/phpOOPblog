@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 18, 2019 at 04:05 PM
+-- Generation Time: Apr 23, 2019 at 11:50 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -69,7 +69,8 @@ INSERT INTO `posts` (`id`, `title`, `post`, `author_id`, `date_posted`) VALUES
 (6, 'What is Lorem Ipsum?', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ', 1, '2019-04-11'),
 (7, 'Where does it come from?', 'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', 1, '2019-04-11'),
 (8, 'Why do we use it?', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to usin', 1, '2019-04-18'),
-(10, 'Where can I get some?', 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,', 1, '2019-04-18');
+(10, 'Where can I get some?', 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,', 1, '2019-04-18'),
+(11, 'Where can I get some?', 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.', 1, '2019-04-23');
 
 --
 -- Indexes for dumped tables
@@ -104,7 +105,7 @@ ALTER TABLE `author`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables

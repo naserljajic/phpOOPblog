@@ -1,6 +1,5 @@
 <?php 
-include_once __DIR__."/vendor/autoload.php";
-include 'app/views/layout/header.php';
+include './app/views/layout/header.php';
 use Blog\controllers\loginController;
 use Blog\models\User;
 ?>
@@ -37,21 +36,21 @@ use Blog\models\User;
                     //print_r($author);
                       $_SESSION['username']=$_POST['username'];
                       echo "<p>You are successfully logged in</p>";
-                       echo "<p><a href='index.php'>Home page </p>";
+                       echo "<p><a href='index'>Home page </p>";
                   }else {
                       echo "Username or password is incorrect!";
-                      echo "<p> <a href='login.php'> Login again </a> <p>";
+                      echo "<p> <a href='login'> Login again </a> <p>";
                   } 
             }else {
                   echo "Username or password is empty!";
-                   echo "<p> <a href='login.php'> Login again </a> <p>";
+                   echo "<p> <a href='login'> Login again </a> <p>";
             }
            }elseif(isset($_SESSION['username'])){
             echo "<p> You are already logged in.</p>";
           }else {
             ?>
             <p> Username: admin, password: admin </p>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+        <form action="login" method="POST">
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
               <label>Username</label>
@@ -82,5 +81,5 @@ use Blog\models\User;
   </div>
 
 <?php
-include 'app/views/layout/footer.php';
+include './app/views/layout/footer.php';
 ?>

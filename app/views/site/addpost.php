@@ -1,6 +1,5 @@
 <?php
-include_once __DIR__."/vendor/autoload.php";
-include 'app/views/layout/header.php';
+include './app/views/layout/header.php';
 use Blog\models\Posts;
 use Blog\models\User;
 use Blog\controllers\PostController;
@@ -49,7 +48,7 @@ use Blog\controllers\PostController;
       			echo "You must be logged in to add a new post";
       		}else {
       			?> 
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+        <form action="addpost" method="POST">
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
               <label>Title</label>
@@ -78,5 +77,5 @@ use Blog\controllers\PostController;
     </div>
   </div>
   <?php
- include 'app/views/layout/footer.php';
+ include './app/views/layout/footer.php';
   ?>

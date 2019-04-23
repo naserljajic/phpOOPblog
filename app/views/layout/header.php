@@ -31,7 +31,7 @@ session_start();
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="index.php">My first OOP PHP blog</a>
+      <a class="navbar-brand" href="index">My first OOP PHP blog</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -39,16 +39,16 @@ session_start();
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.php">Home</a>
+            <a class="nav-link" href="index">Home</a>
           </li>
           
           <li class="nav-item">
            <?php 
           		if(isset($_SESSION['username'])) {
-          			echo '<a class="nav-link" href="addpost.php">Add new post</a>';
+          			echo '<a class="nav-link" href="addpost">Add new post</a>';
           		}else {
           			?>
-            <a class="nav-link" href="post.php?id=1">Sample post</a>
+            <a class="nav-link" href="post/1">Sample post</a>
             <?php
           		}
           	?>
@@ -57,10 +57,10 @@ session_start();
           <li class="nav-item">
           	<?php 
           		if(isset($_SESSION['username'])) {
-          			echo '<a class="nav-link" href="logout.php">Logout</a>';
+          			echo '<a class="nav-link" href="logout">Logout</a>';
           		}else {
           			?>
-            <a class="nav-link" href="login.php">Login</a>
+            <a class="nav-link" href="login">Login</a>
             <?php
           		}
           	?>
